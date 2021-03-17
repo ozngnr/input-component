@@ -2,18 +2,16 @@ import React from 'react';
 import jsxToString from 'jsx-to-string';
 import styled from "styled-components"
 
-const InputContainer = ({children, row, ...restProps}) => {
+const InputContainer = ({children, ...restProps}) => {
   const jsxString = jsxToString(children, {
     shortBooleanSyntax: true,
   })
 
   return (
-    <> 
-      <Container>
+      <Container {...restProps}>
         <Code>{jsxString}</Code>
         {children}
       </Container>
-    </>
    );
 }
  
@@ -28,4 +26,4 @@ const Code = styled.p`
   font-size: 12px;
   color: #333333;
   margin-bottom: 16px;
-`
+`;
