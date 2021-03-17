@@ -2,6 +2,7 @@ import React from 'react';
 import Input from './input';
 import InputContainer from './inputContainer';
 import styled from "styled-components"
+import Footer from './footer';
 
 const Title = styled.h1`
   font-family: "Poppins", sans-serif;
@@ -16,6 +17,7 @@ const Row = styled.div`
 
 const App = () => {
   return (
+    <>
     <main>
       <Title>Inputs</Title>
       <InputContainer>
@@ -61,6 +63,8 @@ const App = () => {
         <Input multiline row="4" />
       </InputContainer>
     </main>
+    <Footer />
+    </>
   );
 }
 
