@@ -2,46 +2,32 @@ import React from 'react';
 import styled, { css } from "styled-components"
 
 
-const Input = (props) => {
-  const {
-    placeholder = "Placeholder",
-    label = "Label",
-    value,
-    helperText,
-    error,
-    disabled,
-    startIcon,
-    endIcon,
-    size = "md",
-    fullWidth,
-    multiline,
-    row
-  } = props
+const Input = ({
+  startIcon,
+  endIcon,
+  helperText,
+  multiline, 
+  placeholder="Placeholder", 
+  label="label", 
+  size="md", 
+  ...restProps
+}) => {
 
   return ( 
     <Wrapper>
       {multiline ? 
       <Textarea 
-        disabled={disabled} 
-        placeholder={placeholder} 
-        error={error} 
-        rows={row}
+        {...restProps}
       ></Textarea> 
       : 
       <StyledInput
-        disabled={disabled} 
-        error={error}
-        placeholder={placeholder}
-        startIcon={startIcon} 
-        defaultValue={value}
-        size={size}
-        fullWidth={fullWidth}
+        {...restProps}
       />
       }
-      <Label error={error}>{label}</Label>  
+      <Label {...restProps}>{label}</Label>  
       {startIcon && <span className="material-icons">phone</span>}
       {endIcon && <span style={{ left: '170px' }} className="material-icons">lock</span>}
-      {helperText && <HelperText error={error}>{helperText}</HelperText>}
+      {helperText && <HelperText {...restProps}>{helperText}</HelperText>}
     </Wrapper> 
   );
 }
