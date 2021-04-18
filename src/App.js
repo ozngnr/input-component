@@ -7,7 +7,7 @@ import Footer from './footer';
 const Title = styled.h1`
   font-family: "Poppins", sans-serif;
   font-size: 24px;
-  color: red;
+  color: #4F4F4F;
   margin-bottom: 65px;
 `;
 const Row = styled.div`
