@@ -4,9 +4,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@base2/pretty-print-object": "^1.0.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "is-plain-object": "^2.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-element-to-jsx-string": "^14.3.2",
