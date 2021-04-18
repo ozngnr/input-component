@@ -21,6 +21,8 @@ const Input = ({
       ></Textarea> 
       : 
       <StyledInput
+        startIcon={startIcon}
+        endIcon={endIcon}
         {...restProps}
       />
       }
@@ -99,8 +101,9 @@ const baseInputStyles = css`
 const StyledInput = styled.input`
   ${baseInputStyles}
   width: ${({fullWidth}) => fullWidth ? "100%" : "200px"};
-  padding: ${({size}) => size === "sm" ? '10px' : '18px'} 12px;
+  padding: ${({size}) => size === "sm" ? "10px" : "18px"} 12px;
   ${({startIcon}) => startIcon && "padding-left: 45px"};
+  ${({endIcon}) => endIcon && "padding-right: 35px"};
 `;
 
 const Textarea = styled.textarea`
