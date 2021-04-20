@@ -3,6 +3,7 @@ import Input from './input';
 import InputContainer from './inputContainer';
 import styled from "styled-components"
 import Footer from './footer';
+import reactElementToJSXString from 'react-element-to-jsx-string';
 
 const Title = styled.h1`
   font-family: "Poppins", sans-serif;
@@ -14,6 +15,8 @@ const Row = styled.div`
   display:flex;
   flex-wrap: wrap;
 `;
+
+const syntax = <Input />
 
 const App = () => {
   return (

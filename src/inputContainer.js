@@ -1,8 +1,9 @@
 import React from 'react';
-import reactElementToJSXString from 'react-element-to-jsx-string';
 import styled from "styled-components";
+import reactElementToJSXString from "react-element-to-jsx-string"
 
 const InputContainer = ({children, ...restProps}) => {
+
   return (
       <Container {...restProps}>
         <Code>{reactElementToJSXString(children)}</Code>
