@@ -17,10 +17,12 @@ const Input = ({
     <Wrapper>
       {multiline ? 
       <Textarea 
+        placeholder={placeholder}
         {...restProps}
       ></Textarea> 
       : 
       <StyledInput
+        placeholder={placeholder}
         startIcon={startIcon}
         endIcon={endIcon}
         size={size}
