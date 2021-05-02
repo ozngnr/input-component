@@ -23,6 +23,7 @@ const Input = ({
       <StyledInput
         startIcon={startIcon}
         endIcon={endIcon}
+        size={size}
         {...restProps}
       />
       }
